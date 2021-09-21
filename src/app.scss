@@ -1,0 +1,72 @@
+@import '~normalize.css';
+@import '~@blueprintjs/core/lib/css/blueprint.css';
+@import '~@blueprintjs/icons/lib/css/blueprint-icons.css';
+
+.header {
+  padding-left: 90px !important;
+  background-color: #C64756;
+  height:70px;
+  
+ 
+ 
+}
+.title{
+    color: white ;
+
+}
+#h2{
+    background-color: #184D47;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.mainsec {
+  margin: 5%;
+  .list{
+      color: white;
+  }
+
+  .mainCards {
+    margin: 5% !important;
+  
+
+    .mainItem {
+      margin-bottom: 50px !important;
+      float: left;
+      background-color:#96BB7C;
+      padding-top: 30px;
+      padding-left: 20px;
+      padding-right: 20px;
+      .button{
+         margin-top: 10px;
+         margin-left: 80px;
+      }
+      .Difficulty{
+        margin-top: 10px;
+        
+      }
+    
+    }
+    
+
+    .mainItem2 {
+      margin-bottom: 50px !important;
+      margin-left: 400px !important;
+      background-color:#184D47;
+    }
+
+    .listCard {
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 20px;
+    }
+
+    .butns {
+      margin-left: 400px !important;
+    }
+  }
+}
