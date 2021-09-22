@@ -1,27 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 export const settingsContext = React.createContext();
 
-export default class Settings extends Component {
-  constructor(props) {
-    super(props);
+export default function Settings(props) {
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [show, setShow] = useState(true);
+  const [sort, setSort] = useState('Ascending');
 
-    this.state = {
-     //Number of items to display per screen (number).
-      itemsPerPage: 3,
-      //Default sort field (string).
-      sort: 'Ascending',
-      //Display or Hide completed items (boolean).
-      show: true,
-      //Manually set (hard code) those state settings in the context provider’s state, they should not be changeable.
-      //done
-    };
-  }
+  useEffect(() => {
+    let raw = localStorage.getItem('settings');
+    if (raw) {
+      let data = JSON.parse(raw);
+      console.log('data', data);
+      setItemsPerPage(Number(data.itemPerPage));
 
-  render() {
-    return (
-      <settingsContext.Provider value={this.state}>
-        {this.props.children}
+      setShow(data.show == 'on' ? true : false);
+    }
+  }, []);
+
+  return (
+    <div>
+      <settingsContext.Provider
+        value={{
+          itemsPerPage,
+          setItemsPerPage,
+          show,
+          setShow,
+          sort,
+          setSort,
+        }}
+      >
+        {props.children}
       </settingsContext.Provider>
-    );
-  }
+    </div>
+  );
 }
