@@ -1,27 +1,25 @@
 import React from 'react';
-import ToDo from './components/Todo.js';
-import SettingsContext from './context/settings/context';
+import ToDo from './components/todo.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Header from './components/Header';
-import SettingsForm from './components/SettingsForm.js';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/header';
+import SettingsForm from './context/settingsForm.js';
 import './app.scss';
-export default class App extends React.Component {
-  render() {
-    return (
-      <SettingsContext>
-        <BrowserRouter>
-          <Header />
-          <Switch>
-            <Route exact path="/">
-              <ToDo />
-            </Route>
-            <Route exact path="/settings">
-              <SettingsForm />
-            </Route>
-          </Switch>
-        </BrowserRouter>
-      </SettingsContext>
-    );
-  }
+export default function App() {
+  return (
+    <>
+      <Router>
+        <Header />
+
+        <Switch>
+          <Route exact path='/'>
+            <ToDo />
+          </Route>
+          <Route exact path='/settings'>
+            <SettingsForm  />
+          </Route>
+        </Switch>
+      </Router>
+    </>
+  );
 }
