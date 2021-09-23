@@ -38,6 +38,38 @@
 
 ![img](/assets/lab31-result2.png)
 
+## LAB 32 - Context API - Behaviors
+
+##  TO-DO App Phase 2:
+
+### Description : this phase was refactoring and editing on TO DO App by :
+
+1. converting all class components to functional ones.
+2. adding settings to edit and control the context.
+3. save the selection to local storage.
+4. using React Browser Route
+
+
+## Links and Resources:
+
+
+
+* ### [code sand box /Phase 2](https://qmln4.csb.app/)
+
+* ### [lab 32 pull request ](https://github.com/Duniaalkilany/todo-app/pull/3)
+
+## UML : 
+
+![img](./assets/lab32-UML.png)
+
+## result /lab 32 :
+
+![img](/assets/result1-lab32.png)
+
+![img](/assets/lab32-result2.png)
+
+
+
 
 
 
