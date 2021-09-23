@@ -9,7 +9,6 @@ import cookie from 'react-cookies';
 // import { v4 as uuid } from 'uuid';
 
 const ToDo = () => {
-  // const API = 'https://api-js401.herokuapp.com';
   const API = 'https://dunia-todo.herokuapp.com/'
   const settings = useContext(SettingsContext);
   const loginContext = useContext(LoginContext);
