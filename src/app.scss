@@ -7,13 +7,23 @@ body {
   padding: 1rem;
   color: black;
 }
+#h2{
+  background-color: #184D47;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
 
 .pagination-buttons {
   margin: 0.25rem;
 }
 .pag{
-  margin-left: 660px;
-  margin-top: -110px;
+  margin-left: 710px;
+  margin-top: -150px;
 }
 #text-input {
   width: 13rem;
@@ -21,7 +31,23 @@ body {
 
 .pagList-container {
   float: right;
+
  
+}
+.card{
+  background-color:#96BB7C ;
+  margin-right: 300px;
+  margin-left: 300px;
+}
+.settingcard{
+  background-color:#96BB7C ;
+  margin-right: 300px;
+  margin-left: 300px;
+  margin-top: 40px;
+ 
+}
+#settingtitle{
+  color: white;
 }
 
 .Navbar,
@@ -34,12 +60,19 @@ Button {
   background-color: rgb(119, 119, 118) !important;
   margin: 0.1rem;
 }
-  
+.mainItem2 {
+  margin-bottom: 80px !important;
+  margin-left: 400px !important;
+  background-color:#184D47;
+  padding-bottom: 60px;
+}
   
 .mainsec {
   margin: 5%;
   .list{
       color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
   }
 
   .mainCards {
@@ -64,16 +97,13 @@ Button {
     
     }
     
-    .mainItem2 {
-      margin-bottom: 50px !important;
-      margin-left: 400px !important;
-      background-color:#184D47;
-    }
+ 
 
     .listCard {
       margin-left: 5%;
       margin-right: 5%;
       margin-bottom: 20px;
+    
     }
 
     .butns {

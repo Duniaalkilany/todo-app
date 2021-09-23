@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { FormGroup, InputGroup } from '@blueprintjs/core';
+import { FormGroup, InputGroup,Card } from '@blueprintjs/core';
 import { SettingsContext } from './settings';
 
 export default function Form() {
@@ -23,8 +23,8 @@ export default function Form() {
   }, []);
   return (
     <>
-      <div>
-        <h2>TO DO Settings : </h2>
+       <Card className="settingcard">
+        <h2 id='settingtitle'>TO DO Settings : </h2>
         <form>
           <FormGroup label='Items Per Page (1 - 10) :' labelFor='text-input'>
             <InputGroup id='text-input' placeholder='# of items/page' type='Number' onChange={handleChange} name='items' value={settings.itemsPerPage} min='1' max='10' />
@@ -39,7 +39,7 @@ export default function Form() {
             </div>
           </FormGroup>
         </form>
-      </div>
+      </Card>
     </>
   );
 }

@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Card, Elevation } from '@blueprintjs/core';
-
+import { LoginContext } from '../context/Login-context';
 export default function List(props) {
+  const logincontext = useContext(LoginContext);
   return (
-    <div>
+   
     <Card className="mainItem2">
-      <h3>Items List</h3>
+      <h3 className='list'>Items List</h3>
       {props.activeList.map((item) => (
       <>
           <Card className="listCard" interactive={true} elevation={Elevation.TWO} key={item.id} >
+          {logincontext.userCapability > 3 && <Button onClick={() => props.deleteItem(item._id)} icon='cross' id='delete-btn'></Button>}
           <h3><b>{item.text}</b></h3>
             <p>
             <b>Assigned to:</b> {item.assignee}
@@ -16,20 +18,14 @@ export default function List(props) {
             <p>
             <b>Difficulty:</b> {item.difficulty}
             </p>
-            <Button
-            class="@ns-button"
-            type="button"
-             className={
-                item.complete ? 'bp3-intent-primary' : 'bp3-intent-danger'
-              } 
-              onClick={() => props.toggleComplete(item.id)}>Complete: {item.complete.toString()}
-              </Button>
+              {logincontext.userCapability > 2 && <Button onClick={() => props.toggleComplete(item._id)}>Complete: {item.complete?.toString()}</Button>}
           </Card>
           <br />
        </>
       ))}
    </Card>
    
-   </div>
+ 
   );
 }
+
